@@ -1,0 +1,155 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 212px;
+  background-color: #0b0a0d;
+  padding-top: 77px;
+  padding-bottom: 85.82px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    flex: 0 0 41.67px;
+    height: 49.18px;
+    margin-right: 212.83px;
+    z-index: 2;
+  }
+
+  &__logo {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.menu {
+
+  &__list {
+    display: flex;
+    column-gap: 30px;
+    line-height: 24px;
+  }
+
+  &__link {
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease-in;
+  }
+
+  &__link:hover {
+    letter-spacing: 0.01em;
+    color: #75ff72;
+  }
+
+  &__link:focus, &__link:active {
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-thickness: 3px;
+    text-underline-position: under;
+    letter-spacing: 0.01em;
+    color: #fff;
+  }
+
+  &__block {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    min-height: 213px;
+    background-color: #0b0a0d;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition-property: visibility, opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+  }
+
+  &__link:hover + &__block {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  &__link:focus + &__block {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  &__sub-list {
+    display: inline-grid;
+    grid-template-columns: repeat(2, auto);
+    grid-row-gap: 30px;
+    grid-column-gap: 142px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #fff;
+    padding-left: 254.5px;
+  }
+}
+
+//body._pc .menu__list .menu__link:hover .menu__block {
+  //opacity: 1;
+  //visibility: visible;
+  //pointer-events: all;
+//}
+
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .header {
+    height: 150px;
+    padding-top: 35px;
+    padding-bottom: 65.82px;
+
+    &__container {
+      justify-content: space-between;
+    }
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+    position: relative;
+    width: 36px;
+    height: 3px;
+    background-color: #fff;
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      background-color: #fff;
+    }
+
+    &:before {
+      top: -10.5px;
+      left: 0;
+      width: 36px;
+    }
+
+    &:after {
+      top: 10.5px;
+      right: 0;
+      width: 18px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+
+
+}
+

@@ -1,0 +1,21 @@
+// Подключение шрифтов
+@import "fonts.scss";
+
+// Файл обнуляющих стилей
+@import "null";
+
+// Файл глобальных, общих стилей
+@import "global";
+
+@import "header";
+
+@import "slider";
+
+@import "faq";
+
+@import "news";
+
+@import "feedback";
+
+@import "footer";
+
